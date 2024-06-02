@@ -1,38 +1,130 @@
 .App {
-  text-align: center;
+	font-family: Arial, sans-serif;
+	padding: 20px;
+	position: relative;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.input-container {
+	margin-bottom: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+label {
+	margin-right: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+button {
+	padding: 10px 20px;
+	background-color: #007bff;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
+button:hover {
+	background-color: #0056b3;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.plot-container {
+	position: absolute;
+	/* Position the container */
+	top: 0;
+	/* Align to the top */
+	right: 0;
+	/* Align to the right */
+	transform-style: preserve-3d;
+	background-color: #f8f9fa;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"],
+input[type="number"],
+select {
+	padding: 8px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus {
+	border-color: #007bff;
+}
+
+.plot-container:hover {
+	transform: scale(1.05);
+	transition: transform 0.3s ease;
+	cursor: pointer;
+}
+
+.primary-text {
+	color: #333;
+}
+
+.secondary-text {
+	color: #666;
+}
+
+.success {
+	color: #28a745;
+}
+
+.error {
+	color: #dc3545;
+}
+
+.page-title {
+	font-size: 24px;
+	font-weight: bold;
+	margin-bottom: 20px;
+	color: #333;
+}
+
+.container {
+	background-color: #f0f0f0;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+	margin-bottom: 20px;
+}
+
+.success-message {
+	background-color: #d4edda;
+	color: #155724;
+	padding: 10px;
+	border-radius: 5px;
+	margin-bottom: 10px;
+}
+
+.error-message {
+	background-color: #f8d7da;
+	color: #721c24;
+	padding: 10px;
+	border-radius: 5px;
+	margin-bottom: 10px;
+}
+
+.plot-and-formula-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.plot-container {
+	margin-bottom: 20px;
+}
+
+.plot-and-formula-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.formula-display {
+	transform: translate(50%, -50%);
+	padding: 170px;
 }
